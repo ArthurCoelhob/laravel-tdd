@@ -1,64 +1,50 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+#       Laravel-TDD: API de Cadastro de Itens
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+ 
+TDD (Test-Driven Development) é uma abordagem de desenvolvimento de software que envolve escrever testes automatizados antes de escrever o próprio código da funcionalidade. Esses testes são geralmente testes unitários, que são focados em testar unidades individuais de código, como funções ou métodos, de forma isolada. O objetivo do TDD é orientar o processo de desenvolvimento, garantindo que o código atenda aos requisitos e funcione conforme o esperado desde o início.
 
-## About Laravel
+No contexto do TDD, o ciclo geralmente segue essas etapas:
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Escrever um teste: Primeiro, você escreve um teste unitário que descreve a funcionalidade que você deseja implementar. Esse teste geralmente falha inicialmente, já que o código ainda não foi escrito.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Escrever o código mínimo: Em seguida, você escreve a quantidade mínima de código necessária para fazer o teste passar. Isso não significa implementar toda a funcionalidade, apenas o suficiente para satisfazer o teste.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Refatorar: Depois que o teste passa, você pode refatorar o código para melhorar sua qualidade, clareza ou eficiência, mantendo o teste passando o tempo todo.
 
-## Learning Laravel
+* Este é um projeto Laravel que implementa uma API de cadastro de itens, com um foco especial em Test-Driven Development (TDD)
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+        git clone https://github.com/ArthurCoelhob/laravel-tdd.git
+        cd laravel-tdd
 
-## Laravel Sponsors
+* Instale as depedencias do Laravel
+  
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+        composer install
 
-### Premium Partners
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+* Configure o arquivo .env
 
-## Contributing
+    DB_CONNECTION=pgsql
+  <br>
+    DB_HOST=127.0.0.1
+  <br>
+    DB_PORT=5432
+  <br>
+    DB_DATABASE=produtos
+  <br>
+    DB_USERNAME=postgres
+  <br>
+    DB_PASSWORD=123
+  <br>
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+ * Inicie o servidor de desenvolvimento
 
-## Code of Conduct
+       php artisan serve
+     
+ * teste o projeto executando os testes
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+        php artisan test
 
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+ 
+        
